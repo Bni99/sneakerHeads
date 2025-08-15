@@ -30,3 +30,5 @@ Segment
 ab har ek folder m alag alag component ho skte hai , or unko hm index.ts file bnaege ek
 ab usko bolte hai slice
 ab ek slice ko bhi hum segment m divide krskte hai jse ui , api
+
+##Now in tailwind release 4.0 you dont even need tailwind.config.ts , u can just add theme in index.css file
