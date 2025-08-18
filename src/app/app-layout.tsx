@@ -4,7 +4,7 @@ import Header from "../widgets/header";
 
 const AppLayout = () => {
   return (
-    <div className="border-2 border-black ml-42 mr-42">
+    <div className="mr-42 ml-42 border-2 border-black">
       <Header />
       <div className="h-[100%] border-2 border-black">
         <Outlet />

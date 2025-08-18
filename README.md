@@ -31,4 +31,13 @@ ab har ek folder m alag alag component ho skte hai , or unko hm index.ts file bn
 ab usko bolte hai slice
 ab ek slice ko bhi hum segment m divide krskte hai jse ui , api
 
+## In order to make the importing things easy we can add jsconfig.json file where we can add
+
+{
+compilerOptions : {
+baseUrl : src
+},include:[src]
+}
+and then assuming ki sab chiz src se start hori hai so you dont need to add ../../ and its just for cra
+
 ##Now in tailwind release 4.0 you dont even need tailwind.config.ts , u can just add theme in index.css file
