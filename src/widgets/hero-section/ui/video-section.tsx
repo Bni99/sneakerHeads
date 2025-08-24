@@ -27,8 +27,8 @@ const VideoSection = ({
       />
       <div className="absolute inset-0 bg-black/50"></div>
 
-      <div className="relative z-10 flex h-full items-center border-2 border-white text-white">
-        <div className="max-w-92 flex-col border-2 border-white">
+      <div className="relative z-10 flex h-full items-center text-white">
+        <div className="max-w-92 flex-col">
           <h2 className="font-display p-4 text-3xl font-bold text-white drop-shadow-lg">
             {heading}
           </h2>

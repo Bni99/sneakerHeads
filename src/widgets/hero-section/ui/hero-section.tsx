@@ -19,7 +19,7 @@ const HeroSection = ({
 }: HeroSectionProps) => {
   const navigate = useNavigate();
   return (
-    <div className="relative h-[90vh] border-2 border-blue-400">
+    <div className="relative h-[90vh]">
       <img
         src={imgSrc}
         alt="hero-image"

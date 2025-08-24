@@ -4,9 +4,9 @@ import Header from "../widgets/header";
 
 const AppLayout = () => {
   return (
-    <div className="mr-42 ml-42 border-2 border-black">
+    <div className="mr-42 ml-42">
       <Header />
-      <div className="h-[100%] border-2 border-black">
+      <div className="h-[100%]">
         <Outlet />
       </div>
       <Footer />
