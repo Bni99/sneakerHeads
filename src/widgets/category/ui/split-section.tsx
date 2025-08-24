@@ -23,10 +23,10 @@ export const SplitSection = ({ sections }: SplitSectionProps) => {
                   className="h-full w-full object-cover"
                 />
 
-                <div className="group-hover:bg-brand-black/12 bg-brand-grey/12 pointer-events-none absolute inset-0 transition-colors duration-400" />
+                <div className="group-hover:bg-brand-grey/10 bg-brand-grey/15 pointer-events-none absolute inset-0 transition-colors duration-900" />
 
                 <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
-                  <h2 className="text-[28px] font-semibold text-white opacity-0 drop-shadow-lg duration-400 ease-out group-hover:opacity-100">
+                  <h2 className="font-display text-[28px] font-semibold text-white opacity-0 drop-shadow-lg duration-700 ease-out group-hover:opacity-100">
                     {section.sectionName}
                   </h2>
                 </div>

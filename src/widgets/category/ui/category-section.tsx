@@ -25,10 +25,17 @@ const CategoriesSection = ({
       <div className="flex h-full">
         {categories?.map((category: Category) => {
           return (
-            <div key={category?.id} className="flex-1 p-6 pl-0">
+            <div key={category?.id} className="m-4 ml-0 flex-1 p-6 pl-0">
               <div>
                 <Link to={category.link}>
-                  <img src={category.image} alt={category.categoryName} />
+                  <div className="relative">
+                    <img
+                      src={category.image}
+                      alt={category.categoryName}
+                      className="h-full w-full object-cover"
+                    />
+                    <div className="hover:bg-brand-grey/15 absolute inset-0 transition-colors duration-400" />
+                  </div>
                 </Link>
               </div>
               <h4 className="p-4 pl-0 text-xl">
