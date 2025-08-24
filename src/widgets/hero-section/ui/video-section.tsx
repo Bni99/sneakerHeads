@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { Button } from "../../../shared/ui";
 
 type VideoSectionProps = {
   videoSrc: string;
@@ -13,6 +14,7 @@ const VideoSection = ({
   subHeading,
   link,
 }: VideoSectionProps) => {
+  const navigate = useNavigate();
   return (
     <section className="relative mt-12 h-[80vh] overflow-hidden">
       <video
@@ -31,9 +33,13 @@ const VideoSection = ({
             {heading}
           </h2>
           <p className="p-4 pt-0 text-lg drop-shadow-md">{subHeading}</p>
-          <Link to={link} className="m-4 mt-0 rounded-lg bg-white text-black">
+          <Button
+            className="m-4 mt-0"
+            variant="outline"
+            onClick={() => navigate(`${link}`)}
+          >
             Shop Now
-          </Link>
+          </Button>
         </div>
       </div>
     </section>
