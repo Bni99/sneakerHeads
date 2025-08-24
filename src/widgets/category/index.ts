@@ -1,3 +1,3 @@
-import { CategoriesSection, BrandCategoriesSection } from "./ui";
+import { CategoriesSection, BrandCategoriesSection, SplitSection } from "./ui";
 
-export { CategoriesSection, BrandCategoriesSection };
+export { CategoriesSection, BrandCategoriesSection, SplitSection };

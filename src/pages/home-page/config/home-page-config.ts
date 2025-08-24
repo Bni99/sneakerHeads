@@ -2,7 +2,6 @@ import menImg from "../../../widgets/category/assets/category-men.jpg";
 import womenImg from "../../../widgets/category/assets/category-women.jpg";
 import kidImg from "../../../widgets/category/assets/category-kid.jpg";
 import newArrivalsImg from "../../../widgets/category/assets/new-arrivals.jpg";
-import limitedEditionImg from "../../../widgets/category/assets/limited-edition.jpg";
 import bestSellersImg from "../../../widgets/category/assets/best-sellers.jpg";
 
 export const categories = [
@@ -11,22 +10,16 @@ export const categories = [
   { id: 3, categoryName: "Kids", link: "/kids", image: kidImg },
 ];
 
-export const specialCategories = [
+export const specialSection = [
   {
     id: 1,
-    categoryName: "New Arrivals",
+    sectionName: "New Arrivals",
     link: "/collections/new-arrivals",
     image: newArrivalsImg,
   },
   {
     id: 2,
-    categoryName: "Limited Edition",
-    link: "/collections/limited-edition",
-    image: limitedEditionImg,
-  },
-  {
-    id: 3,
-    categoryName: "Best Sellers",
+    sectionName: "Best Sellers",
     link: "/collections/best-sellers",
     image: bestSellersImg,
   },

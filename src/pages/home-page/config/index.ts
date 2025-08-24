@@ -1,3 +1,3 @@
-import { categories, specialCategories } from "./home-page-config";
+import { categories, specialSection } from "./home-page-config";
 
-export { categories, specialCategories };
+export { categories, specialSection };

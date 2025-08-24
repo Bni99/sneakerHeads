@@ -1,7 +1,8 @@
-import { categories, specialCategories } from "../config";
+import { categories, specialSection } from "../config";
 import {
   BrandCategoriesSection,
   CategoriesSection,
+  SplitSection,
 } from "../../../widgets/category";
 import { HeroSection, VideoSection } from "../../../widgets/hero-section";
 import heroImage from "../../../widgets/hero-section/assets/hero-section-img.jpg";
@@ -27,10 +28,7 @@ const HomePage = () => {
         link="#"
       />
       <BrandCategoriesSection />
-      <CategoriesSection
-        categoryTitle="Special Collection"
-        categories={specialCategories}
-      />
+      <SplitSection sections={specialSection} />
     </>
   );
 };
