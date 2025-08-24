@@ -4,8 +4,8 @@
 @theme {
   --font-display: "Kumbh Sans", sans-serif;
   --color-brand-black: hsl(0, 0%, 0%);
-  --color-brand-light-grey: hsl(223, 64%, 98%);
-  --color-brand-grey: hsl(220, 14%, 75%);
+  --color-brand-light-grey: #f5f5f5;
+  --color-brand-grey: #dddddd;
   --color-brand-dark-grey: hsl(219, 9%, 45%);
   --color-brand-dark-blue: hsl(220, 13%, 13%);
   --color-brand-orange: hsl(26, 100%, 55%);

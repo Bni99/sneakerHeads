@@ -19,13 +19,13 @@ const HeroSection = ({
 }: HeroSectionProps) => {
   const navigate = useNavigate();
   return (
-    <div className="relative h-[90vh]">
+    <div className="relative mr-42 ml-42 h-[90vh]">
       <img
         src={imgSrc}
         alt="hero-image"
         className="h-full w-full object-cover"
       ></img>
-      <div className="absolute top-25 left-25 w-[30%]">
+      <div className="absolute top-30 left-30 w-[30%]">
         <h2 className="font-display text-brand-dark-blue p-4 pl-0 text-5xl font-extrabold">
           {heading}
         </h2>

@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
+import { Separator } from "../../../shared";
 
 const Header = () => {
   return (
     <>
-      <div className="flex h-24 items-center">
+      <div className="mr-42 ml-42 flex h-20 items-center">
         <div className="flex flex-8 items-center">
           <div>
             <Link to="/">
@@ -13,7 +14,7 @@ const Header = () => {
             </Link>
           </div>
           <div>
-            <ul className="text-brand-dark-blue flex gap-16">
+            <ul className="text-brand-dark-blue mt-2 ml-4 flex gap-12">
               <li>
                 <Link to="/collections">Collections</Link>
               </li>
@@ -35,7 +36,7 @@ const Header = () => {
           <div>User icon</div>
         </div>
       </div>
-      <hr />
+      <Separator />
     </>
   );
 };

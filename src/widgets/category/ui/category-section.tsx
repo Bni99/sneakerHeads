@@ -18,7 +18,7 @@ const CategoriesSection = ({
   categories,
 }: CategoriesSectionProps) => {
   return (
-    <section className="mt-12">
+    <section className="mt-12 mr-42 ml-42">
       <h2 className="font-display text-brand-dark-blue p-4 pl-0 text-2xl font-bold">
         {categoryTitle}
       </h2>

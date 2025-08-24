@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
+import { Separator } from "../../../shared";
 
 const Footer = () => {
   return (
     <>
-      <hr />
-      <div className="flex h-48 items-center">
+      <Separator />
+      <div className="mr-42 ml-42 flex h-48 items-center">
         <div className="flex-6">
           <h2 className="pt-2 pr-4 pb-1 text-2xl font-bold">SneakerHeads</h2>
           <h4 className="text-sm">For the love of the sole.</h4>

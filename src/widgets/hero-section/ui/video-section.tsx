@@ -16,7 +16,7 @@ const VideoSection = ({
 }: VideoSectionProps) => {
   const navigate = useNavigate();
   return (
-    <section className="relative mt-12 h-[80vh] overflow-hidden">
+    <section className="relative mt-12 h-[90vh] overflow-hidden">
       <video
         className="absolute inset-0"
         src={videoSrc}
@@ -25,11 +25,11 @@ const VideoSection = ({
         loop
         playsInline
       />
-      <div className="absolute inset-0 bg-black/50"></div>
+      <div className="absolute inset-0 bg-black/30"></div>
 
-      <div className="relative z-10 flex h-full items-center text-white">
-        <div className="max-w-92 flex-col">
-          <h2 className="font-display p-4 text-3xl font-bold text-white drop-shadow-lg">
+      <div className="relative z-10 ml-10 flex h-full items-center text-white">
+        <div className="max-w-[410px] flex-col">
+          <h2 className="font-display p-4 text-4xl font-bold text-white drop-shadow-lg">
             {heading}
           </h2>
           <p className="p-4 pt-0 text-lg drop-shadow-md">{subHeading}</p>

@@ -4,7 +4,7 @@ import Header from "../widgets/header";
 
 const AppLayout = () => {
   return (
-    <div className="mr-42 ml-42">
+    <div>
       <Header />
       <div className="h-[100%]">
         <Outlet />

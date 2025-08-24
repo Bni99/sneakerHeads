@@ -31,14 +31,14 @@ const brandCategories = [
 
 const BrandCategoriesSection = () => {
   return (
-    <div className="mt-24">
+    <div className="mt-12 mr-42 ml-42">
       <h2 className="font-display text-brand-dark-blue p-4 pl-0 text-2xl font-bold">
         Explore Our Top Brands
       </h2>
-      <div className="mt-12 flex h-full">
+      <div className="flex h-full">
         {brandCategories.map((category) => {
           return (
-            <div className="hover:bg-brand-light-grey border-brand-dark-grey m-2 ml-0 flex flex-1 justify-center rounded-sm border-[1px] p-6 pl-0">
+            <div className="border-brand-grey hover:bg-brand-light-grey mt-4 mr-6 ml-0 flex flex-1 cursor-pointer justify-center rounded-sm border-[1px] p-6 pl-0">
               <div>
                 <Link to={category.link}>{category.logo}</Link>
               </div>
