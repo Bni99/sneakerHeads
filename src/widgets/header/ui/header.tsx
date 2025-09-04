@@ -1,8 +1,12 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Separator } from "../../../shared";
+import { SignUpForm } from "../../../features";
+import { MdOutlineSearch } from "react-icons/md";
 import { FaCartShopping } from "react-icons/fa6";
+import { Button, Separator } from "../../../shared";
 
 const Header = () => {
+  const [isSignUpOpen, setIsSignUpOpen] = useState(false);
   return (
     <>
       <div className="mr-42 ml-42 flex h-20 items-center">
@@ -52,17 +56,32 @@ const Header = () => {
           </div>
         </div>
 
-        <div className="mt-2 flex flex-2 items-center gap-4">
+        <div className="mt-2 flex flex-2 items-center gap-6">
+          <div>
+            <MdOutlineSearch
+              size={24}
+              className="cursor-pointer transition-transform duration-200 hover:scale-105"
+            />
+          </div>
           <div>
             <FaCartShopping
               size={20}
               className="cursor-pointer transition-transform duration-200 hover:scale-105"
             />
           </div>
-          <div>User icon</div>
+          <div>
+            <Button
+              size="small"
+              variant="invertOutline"
+              onClick={() => setIsSignUpOpen(true)}
+            >
+              Sign Up
+            </Button>
+          </div>
         </div>
       </div>
       <Separator />
+      <SignUpForm open={isSignUpOpen} onOpenChange={setIsSignUpOpen} />
     </>
   );
 };
