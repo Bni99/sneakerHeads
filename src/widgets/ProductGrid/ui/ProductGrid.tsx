@@ -1,16 +1,26 @@
 import { ProductCard } from "../../../entities";
-import { mockProducts } from "../../../shared/api/__mocks__/product";
 
-const ProductGrid = () => {
+type Product = {
+  id: number;
+  title: string;
+  price: number;
+  image: string;
+};
+
+type ProductGridProps = {
+  products: Product[];
+};
+
+const ProductGrid = ({ products }: ProductGridProps) => {
   return (
-    <div className="flex h-[80vh]">
-      {mockProducts.map((mockProduct) => {
+    <div className="flex flex-wrap gap-6">
+      {products.map((product: Product) => {
         return (
           <ProductCard
-            id={mockProduct.id}
-            image={mockProduct.image}
-            name={mockProduct.title}
-            price={mockProduct.price}
+            id={product.id}
+            image={product.image}
+            name={product.title}
+            price={product.price}
           />
         );
       })}
