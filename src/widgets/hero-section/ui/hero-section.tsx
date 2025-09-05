@@ -30,7 +30,7 @@ const HeroSection = ({
           {heading}
         </h2>
         <h4 className="text-brand-dark-grey p-2 pl-0 text-lg">{description}</h4>
-        <Button onClick={() => navigate(`${link}`)} className="mt-2">
+        <Button onClick={() => navigate(`${link}`)} className="mt-2 text-white">
           {linkText} <GoArrowRight size={16} />
         </Button>
       </div>
