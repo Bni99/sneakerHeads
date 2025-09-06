@@ -4,42 +4,104 @@ export const mockProducts = [
     title: "New Balance 9060",
     price: 160,
     image: "/images/products/shoe_one.png",
+    description:
+      "The New Balance 9060 is a modern reinterpretation of classic running silhouettes with premium comfort and style.",
+    rating: 4.5,
+    images: [
+      "/images/product_detail/shoe_one_shot1.png",
+      "/images/product_detail/shoe_one_shot2.png",
+      "/images/product_detail/shoe_one_shot3.png",
+      "/images/product_detail/shoe_one_shot4.png",
+    ],
   },
   {
     id: 2,
     title: "Jordan Retro 8",
     price: 215,
     image: "/images/products/shoe_two.png",
+    description:
+      "The Jordan Retro 8 revives an iconic design with premium materials, bold color blocking, and unmatched sneaker heritage.",
+    rating: 4.7,
+    images: [
+      "/images/product_detail/shoe_two_shot1.png",
+      "/images/product_detail/shoe_two_shot2.png",
+      "/images/product_detail/shoe_two_shot3.png",
+      "/images/product_detail/shoe_two_shot4.png",
+    ],
   },
   {
     id: 3,
     title: "Jordan Retro 1 High OG",
     price: 185,
     image: "/images/products/shoe_three.png",
+    description:
+      "One of the most iconic sneakers of all time, the Jordan Retro 1 High OG offers timeless style and everyday comfort.",
+    rating: 4.9,
+    images: [
+      "/images/product_detail/shoe_three_shot1.png",
+      "/images/product_detail/shoe_three_shot2.png",
+      "/images/product_detail/shoe_three_shot3.png",
+      "/images/product_detail/shoe_three_shot4.png",
+    ],
   },
   {
     id: 4,
-    title: "Nike Air Vapormax plus",
+    title: "Nike Air Vapormax Plus",
     price: 199,
     image: "/images/products/shoe_four.png",
+    description:
+      "The Nike Air Vapormax Plus combines futuristic Air cushioning with the design of the Air Max Plus for unbeatable comfort.",
+    rating: 4.4,
+    images: [
+      "/images/product_detail/shoe_four_shot1.png",
+      "/images/product_detail/shoe_four_shot2.png",
+      "/images/product_detail/shoe_four_shot3.png",
+      "/images/product_detail/shoe_four_shot4.png",
+    ],
   },
   {
     id: 5,
     title: "New Balance 574",
     price: 100,
     image: "/images/products/shoe_five.png",
+    description:
+      "The New Balance 574 is a casual classic, loved for its retro style and dependable all-day comfort.",
+    rating: 4.2,
+    images: [
+      "/images/product_detail/shoe_five_shot1.png",
+      "/images/product_detail/shoe_five_shot2.png",
+      "/images/product_detail/shoe_five_shot3.png",
+      "/images/product_detail/shoe_five_shot4.png",
+    ],
   },
   {
     id: 6,
     title: "New Balance 9060",
     price: 119,
     image: "/images/products/shoe_six.png",
+    description:
+      "A new take on the 9060 series with bold design elements, lightweight construction, and stylish appeal.",
+    rating: 4.3,
+    images: [
+      "/images/product_detail/shoe_six_shot1.png",
+      "/images/product_detail/shoe_six_shot2.png",
+      "/images/product_detail/shoe_six_shot3.png",
+      "/images/product_detail/shoe_six_shot4.png",
+    ],
   },
-
   {
     id: 7,
     title: "Nike Air Max 90",
     price: 135,
     image: "/images/products/shoe_seven.png",
+    description:
+      "The Nike Air Max 90 stays true to its roots with iconic design lines, durable materials, and visible Air cushioning.",
+    rating: 4.6,
+    images: [
+      "/images/product_detail/shoe_seven_shot1.png",
+      "/images/product_detail/shoe_seven_shot2.png",
+      "/images/product_detail/shoe_seven_shot3.png",
+      "/images/product_detail/shoe_seven_shot4.png",
+    ],
   },
 ];

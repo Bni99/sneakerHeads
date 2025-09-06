@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 type ProductCardProps = {
   id: number;
   name: string;
@@ -7,16 +9,18 @@ type ProductCardProps = {
 
 const ProductCard = ({ id, name, price, image }: ProductCardProps) => {
   return (
-    <div className="w-80 border-2 border-black" key={id}>
-      <img src={image} />
-      <h4 className="p-2 pl-0 text-lg">{name}</h4>
-      <span className="font-bold">
-        {new Intl.NumberFormat("en-IN", {
-          style: "currency",
-          currency: "USD",
-        }).format(price)}
-      </span>
-    </div>
+    <Link to={`/product/${id}`}>
+      <div className="w-80 border-2 border-black" key={id}>
+        <img src={image} />
+        <h4 className="p-2 pl-0 text-lg">{name}</h4>
+        <span className="font-bold">
+          {new Intl.NumberFormat("en-IN", {
+            style: "currency",
+            currency: "USD",
+          }).format(price)}
+        </span>
+      </div>
+    </Link>
   );
 };
 
