@@ -3,6 +3,7 @@ import { mockProducts } from "../../../shared/api/__mocks__/product";
 import { FaPlus, FaStar } from "react-icons/fa6";
 import { Button } from "../../../shared";
 import { ProductImageGallery } from "../../../entities";
+import { ShoeSizeSelector } from "../../../features";
 
 const ProductPage = () => {
   const { id } = useParams();
@@ -12,7 +13,7 @@ const ProductPage = () => {
       <div className="flex-3 border-2 border-black">
         <ProductImageGallery images={product?.images as string[]} />
       </div>
-      <div className="flex-2 border-2 border-black p-4">
+      <div className="flex-2 border-2 border-black p-10">
         <span className="align-center flex w-fit border-2 border-black pr-2 pl-2">
           <FaStar />
           {product?.rating}
@@ -29,7 +30,8 @@ const ProductPage = () => {
         <h4 className="text-brand-dark-grey p-2 pl-0">
           {product?.description}
         </h4>
-        <Button size="large" className="mt-2 w-full text-white">
+        <ShoeSizeSelector />
+        <Button size="large" className="mt-10 w-full text-white">
           Add to Cart <FaPlus />
         </Button>
       </div>
