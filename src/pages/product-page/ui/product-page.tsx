@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import { mockProducts } from "../../../shared/api/__mocks__/product";
 import { FaPlus, FaStar } from "react-icons/fa6";
 import { Button } from "../../../shared";
-import { ProductImageGallery } from "../../../entities";
+import { ProductImageGallery, ProductTag } from "../../../entities";
 import { ShoeSizeSelector } from "../../../features";
 import { useState } from "react";
 
@@ -18,6 +18,7 @@ const ProductPage = () => {
         <ProductImageGallery images={product?.images as string[]} />
       </div>
       <div className="flex-2 border-2 border-black p-10">
+        <ProductTag labels={product?.tags as string[]} />
         <span className="align-center flex w-fit border-2 border-black pr-2 pl-2">
           <FaStar />
           {product?.rating}

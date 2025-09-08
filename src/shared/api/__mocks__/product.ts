@@ -28,6 +28,7 @@ export const mockProducts = [
       "11.5",
       "12.0",
     ],
+    tags: ["Best Seller"],
   },
   {
     id: 2,
@@ -57,6 +58,7 @@ export const mockProducts = [
       "11.5",
       "12.0",
     ],
+    tags: ["New Arrival"],
   },
   {
     id: 3,
@@ -113,6 +115,7 @@ export const mockProducts = [
       "11.5",
       "12.0",
     ],
+    tags: ["Best Seller"],
   },
   {
     id: 5,
@@ -170,6 +173,7 @@ export const mockProducts = [
       "11.5",
       "12.0",
     ],
+    tags: ["New Arrival"],
   },
   {
     id: 7,
@@ -199,5 +203,6 @@ export const mockProducts = [
       "11.5",
       "12.0",
     ],
+    tags: ["Limited Edition"],
   },
 ];

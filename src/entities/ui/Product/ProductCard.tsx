@@ -1,18 +1,21 @@
 import { Link } from "react-router-dom";
+import ProductTag from "./ProductTag";
+import type { Product } from "../../../types";
 
 type ProductCardProps = {
-  id: number;
-  name: string;
-  price: number;
-  image: string;
+  product: Product;
 };
 
-const ProductCard = ({ id, name, price, image }: ProductCardProps) => {
+const ProductCard = ({ product }: ProductCardProps) => {
+  const { id, image, title, price, tags } = product;
   return (
     <Link to={`/product/${id}`}>
-      <div className="w-80 border-2 border-black" key={id}>
+      <div className="relative w-80 border-2 border-black" key={id}>
         <img src={image} />
-        <h4 className="p-2 pl-0 text-lg">{name}</h4>
+        <span className="absolute top-2 left-2">
+          <ProductTag labels={tags} />
+        </span>
+        <h4 className="p-2 pl-0 text-lg">{title}</h4>
         <span className="font-bold">
           {new Intl.NumberFormat("en-IN", {
             style: "currency",
