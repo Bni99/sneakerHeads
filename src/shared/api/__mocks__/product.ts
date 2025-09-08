@@ -29,6 +29,7 @@ export const mockProducts = [
       "12.0",
     ],
     tags: ["Best Seller"],
+    numberOfReviews: 280,
   },
   {
     id: 2,
@@ -59,6 +60,7 @@ export const mockProducts = [
       "12.0",
     ],
     tags: ["New Arrival"],
+    numberOfReviews: 13,
   },
   {
     id: 3,
@@ -88,6 +90,7 @@ export const mockProducts = [
       "11.0",
       "11.5",
     ],
+    numberOfReviews: 12,
   },
   {
     id: 4,
@@ -116,6 +119,7 @@ export const mockProducts = [
       "12.0",
     ],
     tags: ["Best Seller"],
+    numberOfReviews: 390,
   },
   {
     id: 5,
@@ -146,6 +150,7 @@ export const mockProducts = [
       "11.5",
       "12.0",
     ],
+    numberOfReviews: 90,
   },
   {
     id: 6,
@@ -174,6 +179,7 @@ export const mockProducts = [
       "12.0",
     ],
     tags: ["New Arrival"],
+    numberOfReviews: 80,
   },
   {
     id: 7,
@@ -204,5 +210,6 @@ export const mockProducts = [
       "12.0",
     ],
     tags: ["Limited Edition"],
+    numberOfReviews: 23,
   },
 ];
