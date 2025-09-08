@@ -4,10 +4,14 @@ import { FaPlus, FaStar } from "react-icons/fa6";
 import { Button } from "../../../shared";
 import { ProductImageGallery } from "../../../entities";
 import { ShoeSizeSelector } from "../../../features";
+import { useState } from "react";
 
 const ProductPage = () => {
   const { id } = useParams();
   const product = mockProducts.find((p) => p.id === Number(id));
+  const [selectedSize, setSelectedSize] = useState<string | null>(null);
+  console.log(selectedSize);
+
   return (
     <div className="mt-12 mr-42 ml-42 flex h-[90vh] border-2 border-black">
       <div className="flex-3 border-2 border-black">
@@ -30,8 +34,11 @@ const ProductPage = () => {
         <h4 className="text-brand-dark-grey p-2 pl-0">
           {product?.description}
         </h4>
-        <ShoeSizeSelector />
-        <Button size="large" className="mt-10 w-full text-white">
+        <ShoeSizeSelector
+          availableSizes={product?.availableSizes as string[]}
+          onSizeSelection={setSelectedSize}
+        />
+        <Button size="large" className="mt-10 w-full" disabled={!selectedSize}>
           Add to Cart <FaPlus />
         </Button>
       </div>

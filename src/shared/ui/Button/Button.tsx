@@ -9,10 +9,11 @@ type ButtonProps = {
   onClick?: () => void;
   variant?: Variant;
   size?: Size;
+  disabled: boolean;
 } & ButtonHTMLAttributes<HTMLButtonElement>;
 
 const variantClasses: Record<Variant, string> = {
-  primary: "bg-brand-orange text-black hover:bg-brand-medium-orange",
+  primary: "bg-brand-orange text-white hover:bg-brand-medium-orange",
   secondary: "bg-gray-200 text-black hover:bg-gray-300",
   outline: "border border-white text-white hover:bg-white hover:text-black",
   invertOutline:
@@ -31,12 +32,19 @@ const Button = ({
   onClick,
   variant = "primary",
   size = "medium",
+  disabled = false,
   ...props
 }: ButtonProps) => {
+  const baseClasses = `font-display flex items-center justify-center gap-1 rounded-lg transition duration-300 ${sizeClasses[size]} ${className}`;
+
+  const variantClass = disabled
+    ? "bg-brand-light-grey text-brand-grey cursor-not-allowed"
+    : variantClasses[variant];
+
   return (
     <button
       onClick={onClick}
-      className={`font-display flex cursor-pointer items-center justify-center gap-1 rounded-lg transition duration-300 ${variantClasses[variant]} ${className} ${sizeClasses[size]}`}
+      className={`${baseClasses} ${variantClass}`}
       {...props}
     >
       {children}
