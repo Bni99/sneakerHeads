@@ -3,13 +3,15 @@ import { Link } from "react-router-dom";
 import { SignUpForm } from "../../../features";
 import { MdOutlineSearch } from "react-icons/md";
 import { FaCartShopping } from "react-icons/fa6";
-import { Button, Separator } from "../../../shared";
+import { Button, Separator, useCartStore } from "../../../shared";
 
 const Header = () => {
   const [isSignUpOpen, setIsSignUpOpen] = useState(false);
+  const totalItems = useCartStore((state) => state.totalItems);
+
   return (
     <>
-      <div className="mr-42 ml-42 flex h-20 items-center">
+      <div className="mx-42 flex h-20 items-center">
         <div className="flex flex-8 items-center">
           <div>
             <Link to="/">
@@ -63,14 +65,19 @@ const Header = () => {
               className="cursor-pointer transition-transform duration-200 hover:scale-105"
             />
           </div>
-          <div>
+          <div className="relative">
             <Link to="/cart">
+              <span className="bg-brand-orange absolute -top-2 -right-2 flex h-4 w-4 items-center justify-center rounded-full text-xs font-bold text-white">
+                {totalItems}
+              </span>
+
               <FaCartShopping
-                size={20}
+                size={22}
                 className="cursor-pointer transition-transform duration-200 hover:scale-105"
               />
             </Link>
           </div>
+
           <div>
             <Button
               size="small"

@@ -4,16 +4,27 @@ import { useState } from "react";
 import { ProductImageGallery, ProductTag, Rating } from "../../../entities";
 import { ShoeSizeSelector } from "../../../features";
 import { FaPlus } from "react-icons/fa";
-import { Button } from "../../../shared";
+import { Button, useCartStore } from "../../../shared";
 
 const ProductPage = () => {
   const { id } = useParams();
   const product = mockProducts.find((p) => p.id === Number(id));
   const [selectedSize, setSelectedSize] = useState<string | null>(null);
+  const addItem = useCartStore((store) => store.addItem);
 
   if (!product) {
     return <div className="p-10 text-center">Product not found</div>;
   }
+
+  const handleAddToCart = () => {
+    addItem({
+      id: id,
+      title: product.title,
+      price: product.price,
+      image: product.image,
+      size: selectedSize,
+    });
+  };
 
   return (
     <div className="mx-42 mt-12 flex h-[90vh] gap-10">
@@ -45,7 +56,12 @@ const ProductPage = () => {
           onSizeSelection={setSelectedSize}
         />
 
-        <Button size="large" className="mt-10 w-full" disabled={!selectedSize}>
+        <Button
+          size="large"
+          className="mt-10 w-full cursor-pointer"
+          disabled={!selectedSize}
+          onClick={handleAddToCart}
+        >
           Add to Cart <FaPlus />
         </Button>
       </div>
