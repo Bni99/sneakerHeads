@@ -64,10 +64,12 @@ const Header = () => {
             />
           </div>
           <div>
-            <FaCartShopping
-              size={20}
-              className="cursor-pointer transition-transform duration-200 hover:scale-105"
-            />
+            <Link to="/cart">
+              <FaCartShopping
+                size={20}
+                className="cursor-pointer transition-transform duration-200 hover:scale-105"
+              />
+            </Link>
           </div>
           <div>
             <Button

@@ -1,3 +1,4 @@
+import Cart from "../pages/cart";
 import CollectionSection from "../pages/collection-section";
 import HomePage from "../pages/home-page";
 import ProductPage from "../pages/product-page";
@@ -13,6 +14,7 @@ export const App = () => {
         { path: "/", element: <HomePage /> },
         { path: "/collections", element: <CollectionSection /> },
         { path: "/product/:id", element: <ProductPage /> },
+        { path: "/cart", element: <Cart /> },
         { path: "/men", element: <div>Men Section</div> },
         { path: "/women", element: <div>Women Section</div> },
         { path: "/kids", element: <div>kids Section</div> },

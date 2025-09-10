@@ -9,7 +9,7 @@ type ButtonProps = {
   onClick?: () => void;
   variant?: Variant;
   size?: Size;
-  disabled: boolean;
+  disabled?: boolean;
 } & ButtonHTMLAttributes<HTMLButtonElement>;
 
 const variantClasses: Record<Variant, string> = {
