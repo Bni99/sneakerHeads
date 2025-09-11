@@ -11,11 +11,7 @@ type SignUpFormProps = {
 };
 
 const SignUpForm = ({ open, onOpenChange }: SignUpFormProps) => {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
+  const { register, handleSubmit } = useForm();
   const [isLoginOpen, setIsLoginOpen] = useState(false);
 
   const onSubmit = (data: any) => {
