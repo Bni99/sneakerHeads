@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import ProductTag from "./ProductTag";
 import type { ProductType } from "../../../types";
+import { formatCurrency } from "../../../shared/utils";
 
 type ProductCardProps = {
   product: ProductType;
@@ -16,12 +17,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
           {tags && <ProductTag labels={tags} />}
         </span>
         <h4 className="p-2 pl-0 text-lg">{title}</h4>
-        <span className="font-bold">
-          {new Intl.NumberFormat("en-IN", {
-            style: "currency",
-            currency: "USD",
-          }).format(price)}
-        </span>
+        <span className="font-bold">{formatCurrency(price)}</span>
       </div>
     </Link>
   );

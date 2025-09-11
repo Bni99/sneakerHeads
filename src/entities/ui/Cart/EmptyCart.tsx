@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { Button } from "../../../shared";
+import { MdKeyboardBackspace } from "react-icons/md";
 
 const EmptyCart = () => {
   const navigate = useNavigate();
@@ -16,6 +17,7 @@ const EmptyCart = () => {
         className="mt-2 cursor-pointer"
         onClick={() => navigate("/collections")}
       >
+        <MdKeyboardBackspace />
         Back to Collections
       </Button>
     </div>
