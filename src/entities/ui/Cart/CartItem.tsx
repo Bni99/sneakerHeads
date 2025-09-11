@@ -1,3 +1,4 @@
+import { useCartStore } from "../../../shared";
 import { formatCurrency } from "../../../shared/utils";
 import type { CartItemType } from "../../../types";
 import { RxCross2 } from "react-icons/rx";
@@ -8,6 +9,12 @@ type CartItemProps = {
 
 const CartItem = ({ item }: CartItemProps) => {
   const { id, title, image, price, size } = item;
+  const removeItem = useCartStore((state) => state.removeItem);
+
+  const handleRemoveItem = () => {
+    removeItem(id);
+  };
+
   return (
     <div
       key={`${id}`}
@@ -28,6 +35,7 @@ const CartItem = ({ item }: CartItemProps) => {
         <RxCross2
           className="text-brand-dark-grey absolute top-0 right-0 m-3 cursor-pointer"
           size={22}
+          onClick={handleRemoveItem}
         />
       </div>
     </div>
