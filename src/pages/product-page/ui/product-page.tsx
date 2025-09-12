@@ -41,6 +41,7 @@ const ProductPage = () => {
       price: price,
       image: image,
       size: selectedSize,
+      quantity: 1,
     });
     setToastMessage("Item added to the cart !");
   };

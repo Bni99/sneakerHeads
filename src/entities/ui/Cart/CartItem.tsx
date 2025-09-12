@@ -12,7 +12,7 @@ const CartItem = ({ item }: CartItemProps) => {
   const removeItem = useCartStore((state) => state.removeItem);
 
   const handleRemoveItem = () => {
-    removeItem(id);
+    removeItem(id, size as string);
   };
 
   return (

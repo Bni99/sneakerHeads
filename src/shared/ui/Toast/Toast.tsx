@@ -1,6 +1,7 @@
 import * as RadixToast from "@radix-ui/react-toast";
 import { useEffect, useState } from "react";
 import { useToastStore } from "../../store";
+import "../../../index.css";
 
 const Toast = () => {
   const { message, setMessage } = useToastStore();
@@ -18,13 +19,13 @@ const Toast = () => {
           setOpen(isOpen);
           if (!isOpen) setMessage(null);
         }}
-        className="animate-slide-in animate-fade-out rounded-md bg-black p-3 text-white shadow-lg"
         duration={3000}
+        className="ToastRoot"
       >
-        <RadixToast.Title className="font-bold">{message}</RadixToast.Title>
+        <RadixToast.Title className="ToastTitle">{message}</RadixToast.Title>
       </RadixToast.Root>
 
-      <RadixToast.Viewport className="fixed top-24 right-4 z-50 flex flex-col gap-2" />
+      <RadixToast.Viewport className="ToastViewport" />
     </RadixToast.Provider>
   );
 };
