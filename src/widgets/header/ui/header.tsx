@@ -4,6 +4,7 @@ import { SignUpForm } from "../../../features";
 import { MdOutlineSearch } from "react-icons/md";
 import { FaCartShopping } from "react-icons/fa6";
 import { Button, Separator, useCartStore } from "../../../shared";
+import { FaRegHeart } from "react-icons/fa";
 
 const Header = () => {
   const [isSignUpOpen, setIsSignUpOpen] = useState(false);
@@ -58,18 +59,23 @@ const Header = () => {
           </div>
         </div>
 
-        <div className="mt-2 flex flex-2 items-center gap-6">
+        <div className="mx-8 mt-2 flex flex-2 items-center justify-end gap-6">
           <div>
             <MdOutlineSearch
               size={24}
               className="cursor-pointer transition-transform duration-200 hover:scale-105"
             />
           </div>
+          <span>
+            <FaRegHeart size={22} />
+          </span>
           <div className="relative">
             <Link to="/cart">
-              <span className="bg-brand-orange absolute -top-2 -right-2 flex h-4 w-4 items-center justify-center rounded-full text-xs font-bold text-white">
-                {totalItems}
-              </span>
+              {totalItems > 0 && (
+                <span className="bg-brand-orange absolute -top-2 -right-2 flex h-4 w-4 items-center justify-center rounded-full text-xs font-bold text-white">
+                  {totalItems}
+                </span>
+              )}
 
               <FaCartShopping
                 size={22}

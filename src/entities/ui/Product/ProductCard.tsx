@@ -13,7 +13,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
   return (
     <Link to={`/product/${id}`}>
       <div
-        className="border-brand-light-grey hover:border-brand-dark-grey relative w-80 border shadow-sm transition-all delay-100 duration-300 hover:shadow-md"
+        className="border-brand-light-grey hover:border-brand-dark-grey relative w-80 border shadow-sm transition-all duration-300 hover:shadow-md"
         key={id}
       >
         <img src={image} className="h-80 w-full" />
